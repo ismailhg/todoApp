@@ -8,7 +8,7 @@ const dropdownMenu = document.querySelector('.dropdown-menu');
 const sections = document.querySelectorAll('section');
 const filterLi = document.querySelectorAll('li > a');
 
-import { getTime } from "./functions/getTime.js";
+// import { getTime } from "./functions/getTime.js";
 
 document.addEventListener("DOMContentLoaded", () => {
     localStorageUi();
