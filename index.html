@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <h1>
+        <a href="">
+            <span class="bigTitle">TODO LIST</span>
+        </a>
+    </h1>
+
+    <div id="notification" class="notification"></div>
+    <div id="notificationError" class="notificationError"></div>
+
+    <div class="dropdown">
+        <button class="dropdown-button">FILTER<i class="fa-solid fa-filter"></i></button>
+        <ul class="dropdown-menu">
+            <li><a href="#todoSection">Pending</a></li>
+            <li><a href="#completedSection">Completed</a></li>
+            <li><a href="#deletedSection">Deleted</a></li>
+        </ul>
+    </div>
+    <div class="formDiv">
+        <form class="todoForm">
+            <div class="container">
+                <input type="text" class="todoInput" placeholder="Add a task:">
+                <button type="submit" class="addBtn"><i class="fa-solid fa-plus"></i></button>
+            </div>
+        </form>
+    </div>
+
+    <section class="todoSection">
+        <h3>Pending <i id="pendingIcon" class="fa-solid fa-hourglass"></i> </h3>
+        <ul class="todoList"></ul>
+    </section>
+
+    <section class="completedSection">
+        <h3>Completed <i id="completedIcon" class="fa-solid fa-check"></i> </h3>
+        <ul class="completed-todoList"></ul>
+    </section>
+
+    <section class="deletedSection">
+        <h3>Deleted <i id="deletedIcon" class="fa-solid fa-trash-can"></i> </h3>
+        <ul class="deleted-todoList"></ul>
+    </section>
+
+    <script type="module" src="app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,430 @@
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background: linear-gradient(to bottom, #312d5d, #92488e);
+    display: flex;
+    justify-content: center;
+    padding: 60px;
+    flex-wrap: wrap;
+}
+
+.todoSection,
+.completedSection,
+.deletedSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    height: 66vh;
+    background-color: #f1f2f4;
+    position: relative;
+    border-radius: 25px;
+    width: 21.6%;
+    margin-left: 3%;
+    margin-right: 2%;
+    margin-top: 15vh;
+    overflow: hidden;
+}
+
+.todoInput {
+    padding: 14px;
+    border-radius: 10px;
+    font-size: 17px;
+}
+
+.todoInput:hover {
+    background-color: #fcfcfc;
+}
+
+.addBtn {
+    padding: 12px 16px;
+    background-color: #34A853;
+    border: 1px solid #34A853;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 100%;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+.addBtn:hover {
+    background-color: rgb(22, 128, 22);
+    border-radius: 14px;
+    transition-duration: 300ms;
+}
+
+.bigTitle{
+    margin-top: 12px;
+    font-size: 60px;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: #fff;
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7);
+}
+
+h3 {
+    font-size: 37px;
+    color: #312d5d;
+    text-shadow: 1px 1px 1px #514c8b;
+}
+
+.todoList,
+.completed-todoList,
+.deleted-todoList {
+    padding: 0;
+    width: 100%;
+    margin-top: 15px;
+    max-height: 60vh;
+    overflow-y: auto;
+    font-size: 30px;
+    box-sizing: border-box;
+}
+
+.todoList li {
+    background: #fff;
+    margin: 12px 20px;
+    padding: 10px 5px;
+    border-radius: 15px;
+    display: block;
+    font-size: 30px;
+    box-shadow: 2px 2px 7px 2px #778086;
+    border: 3px solid #fff;
+}
+
+.todoList li:hover {
+    background: #d1c8c8bc;
+    -webkit-box-shadow: 10px 10px 5px -8px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 5px -8px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 5px -8px rgba(0, 0, 0, 0.75);
+    border: 3px solid #2783c0;
+    transition-duration: 300ms;
+}
+
+.completed-todoList li {
+    background: #fff;
+    margin: 12px 20px;
+    padding: 10px 5px;
+    border-radius: 15px;
+    display: block;
+    font-size: 30px;
+    box-shadow: 2px 2px 7px 2px #778086;
+    border: 3px solid #fff;
+}
+
+.completed-todoList li:hover {
+    background: #d1c8c8bc;
+    -webkit-box-shadow: 10px 10px 5px -8px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 5px -8px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 5px -8px rgba(0, 0, 0, 0.75);
+    border: 3px solid #2783c0;
+    transition-duration: 300ms;
+}
+
+.deleted-todoList li {
+    background: #fff;
+    margin: 12px 20px;
+    padding: 10px 5px;
+    border-radius: 15px;
+    display: block;
+    font-size: 30px;
+    box-shadow: 2px 2px 7px 2px #778086;
+    border: 3px solid #fff;
+}
+
+.deleted-todoList li:hover {
+    background: #d1c8c8bc;
+    -webkit-box-shadow: 10px 10px 5px -8px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 5px -8px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 5px -8px rgba(0, 0, 0, 0.75);
+    border: 3px solid #2783c0;
+    transition-duration: 300ms;
+}
+
+.editBtn {
+    background-color: #4285F4;
+    color: white;
+    border: 1px solid #4285F4;
+    border-radius: 15px;
+    padding: 5px 13px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-left: 8px;
+}
+
+.editBtn:hover {
+    background-color: rgb(35, 35, 185);
+    transition-duration: 300ms;
+}
+
+.deleteBtn {
+    background-color: #EA4335;
+    color: white;
+    border: 1px solid #EA4335;
+    border-radius: 15px;
+    padding: 5px 13px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.deleteBtn:hover {
+    background-color: #972c11;
+    transition-duration: 300ms;
+}
+
+.butonsContainer {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.date {
+    display: flex;
+    font-size: 14px;
+    color: #888;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.btnDiv {
+    display: flex;
+    justify-content: right;
+}
+
+.checkbox {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 1.3em;
+    height: 1.3em;
+    border-radius: 50%;
+    border: 2px solid #000;
+    background-color: #fff;
+    cursor: pointer;
+    margin-right: 10px;
+    outline: none;
+}
+
+.checkbox:checked {
+    background-color: #34A853;
+    border-color: #34A853;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-button {
+    position: absolute;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    font-size: 22px;
+    color: #fff;
+}
+
+.dropdown-menu {
+    position: absolute;
+    font-size: 14px;
+    padding: 10px 0;
+    margin-top: 5.5vh;
+    display: none;
+    background-color: #92488e;
+    z-index: 1;
+}
+
+.dropdown-menu li {
+    list-style-type: none;
+    padding: 10px;
+}
+
+.dropdown-menu a {
+    color: white;
+    text-decoration: none;
+    padding: 8px;
+}
+
+.dropdown-menu a:hover {
+
+    background-color: #352c2c;
+    border-radius: 20px;
+    transition-duration: 300ms;
+}
+
+.show {
+    display: block;
+    background: #726868;
+    border-radius: 25px;
+}
+
+#pendingIcon {
+    color: #fbbc05;
+}
+
+#completedIcon {
+    color: #34A853;
+}
+
+#deletedIcon {
+    color: #EA4335;
+}
+
+.restoreBtn {
+    background-color: #4285F4;
+    color: white;
+    border: 1px solid #4285F4;
+    border-radius: 15px;
+    padding: 5px 13px;
+    font-size: 18px;
+    margin-left: 8px;
+}
+
+.restoreBtn:hover {
+    background-color: rgb(40, 40, 190);
+    color: white;
+    border: 1px solid rgb(40, 40, 190);
+    cursor: pointer;
+    transition-duration: 300ms;
+}
+
+.formDiv {
+    padding-top: 6.5px;;
+    background-color: #f1f2f4;
+    position: absolute;
+    top: 110px;
+    width: 22%;
+    display: flex;
+    justify-content: center;
+    border-radius: 12px;
+    margin-left: 29px;
+
+    
+}
+
+.no-tasks{
+    font-size: 21px;
+    text-align: center;
+}
+
+.notification {
+    position: fixed;
+    font-size: 20px;
+    margin-top: 1px;
+    right: 1%;
+    transform: translateX(-50%);
+    background-color: black;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 15px;
+    display: none;
+    z-index: 1000;
+}
+
+@media screen and (max-width: 1410px) {
+
+    .todoSection,
+    .completedSection,
+    .deletedSection {
+        width: 35%;
+    }
+
+    .formDiv {
+        width: 39%;
+    }
+
+    .notification{
+        position: fixed;
+        font-size: 19px;
+        text-align: center;
+        bottom: 50px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: black;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 15px;
+        display: none;
+        z-index: 1000;
+    }
+}
+
+@media screen and (max-width: 800px) {
+
+    body{
+        padding: 8px;
+    }
+
+    .checkbox{
+        -webkit-appearance: none;
+        appearance: none;
+        width: 1.8em;
+        height: 1.8em;
+        border-radius: 50%;
+        border: 2px solid #000;
+        background-color: #fff;
+        cursor: pointer;
+        margin-right: 10px;
+        outline: none;
+    }
+
+    .todoSection{
+        width: 100%;
+        margin-top: 14vh;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 1px;
+    }
+    .todoSection li{
+        font-size: 38px;
+    }
+    
+    .completedSection, .deletedSection{
+        width: 100%;
+        margin-top: 7vh;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 1px;
+    }
+
+    .formDiv {
+        align-items: center;
+        width: 75%;
+        margin-top: 4vh;
+    }
+
+    .todoInput {
+        width: 65%;;
+    }
+
+    .date{
+        font-size: 14px;
+    }
+
+    .dropdown-button {
+        display: flex;
+        position: relative;
+        margin-top: 10vh;
+        margin-right: 25vh;
+        left: 6%;
+    }
+
+    .dropdown-menu {
+        margin-top: -0.185vh;
+        left: 6%;
+    }
+    .notification{
+        position: fixed;
+        font-size: 15.3px;
+        text-align: center;
+        bottom: 50px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: black;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 15px;
+        display: none;
+        z-index: 1000;
+    }
+}
