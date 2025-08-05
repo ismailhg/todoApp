@@ -1,14 +1,11 @@
 # 📝 ToDo List App 
 
-ToDo App V2 is a modern and responsive task management application that allows users to manage personal tasks efficiently. Built using the MERN stack (MongoDB, Express, React, Node.js), the app includes user authentication and a clean UI to help users organize their daily workflow.
-
 ## 💡 Features
 
 - Add, update, and delete tasks
 - Mark tasks as completed
 - Clear completed tasks
 - User registration and login
-- JWT-based authentication and session security
 - Fully responsive design for all devices
 
 ## 🌐 Live Demo
